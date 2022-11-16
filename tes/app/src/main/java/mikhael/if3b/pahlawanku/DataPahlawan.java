@@ -1,5 +1,6 @@
 package mikhael.if3b.pahlawanku;
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class DataPahlawan {
 
@@ -75,4 +76,17 @@ public class DataPahlawan {
     };
 
 
+    public static ArrayList<Modelpahlawan> ambilDataPahlawan() {
+        ArrayList<Modelpahlawan> dataPahlawan = new ArrayList<>();
+        for (String[] varData : data) {
+            Modelpahlawan model = new Modelpahlawan();
+            model.setNama(varData[0]);
+            model.setTentang(varData[1]);
+            model.setFoto(varData[2]);
+
+            dataPahlawan.add(model);
+        }
+
+        return dataPahlawan;
+    }
 }
